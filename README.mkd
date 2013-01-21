@@ -1,0 +1,23 @@
+# IntSetArray
+
+This is **int set** class for sparse set, which implemented by array.
+
+## Example
+
+```java
+import net.kaoriya.qb.intarrayset.IntArraySet;
+
+IntArraySet a = new IntArraySet();
+a.add(1);
+a.add(2);
+a.add(3);
+a.add(4);
+a.add(5);
+IntArraySet b = IntArraySet.newInstance(0, 2, 4, 6, 8);
+
+IntArraySet c1 = IntSetArray.union(a, b);
+// resulted c1 is composed by { 0, 1, 2, 3, 4, 5, 6, 8 }
+
+IntSetArray c2 = IntSetArray.intersect(a, b);
+// resulted c2 is composed by { 2, 4 }
+```
